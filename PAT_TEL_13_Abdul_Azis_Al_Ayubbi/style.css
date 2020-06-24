@@ -1,0 +1,18 @@
+body{
+    background-image: url('img/truck.jpg');
+}
+h2{
+    text-align: center;
+    color:salmon;
+    font-size: 40px;;
+}
+.container{
+    text-align: center;
+    
+    color:salmon;   
+    font-size: 30px;
+}
+.button{
+    background-color:salmon;
+    color:text;
+}

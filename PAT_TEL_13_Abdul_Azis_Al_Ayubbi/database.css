@@ -1,0 +1,17 @@
+body{
+    background-image: url(img/images.jpg);
+}
+h4{
+    text-align: center;
+    font-size: 40px;
+    color:white;
+    
+}
+table{
+    text-align: center;
+    background-color:brown;
+    
+}
+tr{
+    background-color:white;
+}

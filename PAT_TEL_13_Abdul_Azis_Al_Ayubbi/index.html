@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM TRUK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>FORM TRUK BERAS : </h2>
+    <div class="container">
+    <form action="input_data_truck.php" method="POST">
+        <label for="jumlah_truk">Input Jumlah Truck : </label><br>
+        <input type="text" name="jumlah_truk" id="jumlah_truk" onkeyup="hasil();" size="70"><br> * <br>
+        <label for="jumlah_beras_truk">Input jumlah beras yang dibawa truk :  </label><br>
+        <input type="text" name="jumlah_beras_truk" id="jumlah_beras_truk" onkeyup="hasil()" size="70"><br> + <br>
+        <label for="persediaan_beras">Sisa Persediaan beras gudang : </label><br>
+        <input type="text" name="persediaan_beras" id="persediaan_beras" onkeyup="hasil();" size="70"> <br> = <br>
+        <label for="total">Total Beras : </label> <br>
+        <input type="text" name="total" id="total" size="70"><br><br>
+        <button type="submit" style="background-color:salmon; color:white; padding:20px 30px;">Kirim data</button>
+    </form>
+    </div>
+    <script>
+        function hasil(){
+            let jumlahTruk = document.getElementById('jumlah_truk').value;
+            let jumlahBerasTruk = document.getElementById('jumlah_beras_truk').value;
+            let jumlahPersediaanBeras = document.getElementById('persediaan_beras').value;
+            let hasilJumlah = (parseFloat(jumlahTruk) * parseFloat(jumlahBerasTruk)) + parseFloat(jumlahPersediaanBeras);
+            if(!isNaN(hasilJumlah)){
+                document.getElementById('total').value = hasilJumlah;
+            }
+        }
+    </script>
+</body>
+</html>
